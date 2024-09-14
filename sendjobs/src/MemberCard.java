@@ -23,9 +23,14 @@ public class MemberCard {
         this.purchaseAmount = purchaseAmount;
     }
 
-     public double calculateDiscount() {
+    public double calculateDiscount() {
+        if (getPurchaseAmount() >= 2000) {
+        return getPurchaseAmount() * .01d;
+            
+        }
         return 0;
      }
+
 
      public void display() {
         System.out.println("Customer Name :"+name);
